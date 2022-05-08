@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Square+Peg&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&family=Square+Peg&display=swap');/* variables */
+:root {
+  --varBG:#101019;
+  --mainWhite: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,61 +10,79 @@
 }
 
 body {
-  background-color: rgb(74, 165, 244);
+  background-color: var(--varBG);
   font-family: 'Roboto', sans-serif;
+  color: var(--mainWhite);
 }
 
-.container {
-  width: 28Vw;
-  min-height: 3rem;
-  margin: 3rem auto 0 auto;
-  background-color: #fff;
-  padding: 2rem;
-}
+/* header section */
 
-.title {
-  margin-bottom: 2rem;
-}
-
-.data-container {
-  margin-top: 20px;
-  display: flex;
-  gap: 12px;
+.header {
+  height: 100vh;
 }
 
 .img-container {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-}
-
-img {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: var(--light-shadow);
-}
-
-.data-info {
-  margin-top : 18px;
-  font-family: inherit;
-}
-
-.name {
-  font-weight: 900;
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.btn {
-  margin-top: 2.5rem;
   width: 100%;
-  height: 40px;
-  border: 0;
-  background-color:rgb(74, 165, 244);
-  color: #fff;
-  font-size: 1.1rem;
-  cursor: pointer;
-  text-transform: capitalize;
+  height: 50%;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  display: block;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.05);
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 1rem;
+}
+
+.bars {
+  font-size: 1.8rem;
+  color: red;
+  animation-name: bars;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.logo {
+  width: 70px;
+  height: 65px;
+  margin-top: 4px;
+}
+
+.header-info {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Poppins', 'sans-serif';
+  background-image: url(../public/images/text-bg.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading {
+  font-style: 'poppins', sans-serif;
+  font-weight: bold;
+}
+
+@keyframes bars{
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1);
+  }
 }
